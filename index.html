@@ -535,6 +535,98 @@
 
                     </div>
                 </section>
+                <!-- Galeri -->
+                <section class="px-6 md:px-20 py-16 bg-white dark:bg-background-dark/50" id="galeri">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex justify-between items-end mb-10">
+                            <div>
+                                <h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-2">Galeri Desa</h2>
+                                <p class="text-slate-500">Momen dan keindahan Desa Malola yang terabadikan.</p>
+                            </div>
+                        </div>
+
+                        <!-- Grid Galeri -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+
+                            <!-- Foto besar (span 2 kolom) -->
+                            <div class="col-span-2 md:col-span-2 row-span-2 group relative overflow-hidden rounded-2xl aspect-[16/9] md:aspect-square cursor-pointer"
+                                onclick="openLightbox(this)">
+                                <img src="https://picsum.photos/seed/malola1/800/600" alt="Galeri 1"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+                                </div>
+                            </div>
+
+                            <!-- Foto kecil kanan atas -->
+                            <div class="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer"
+                                onclick="openLightbox(this)">
+                                <img src="https://picsum.photos/seed/malola2/400/400" alt="Galeri 2"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+                                </div>
+                            </div>
+
+                            <!-- Foto kecil kanan bawah -->
+                            <div class="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer"
+                                onclick="openLightbox(this)">
+                                <img src="https://picsum.photos/seed/malola3/400/400" alt="Galeri 3"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+                                </div>
+                            </div>
+
+                            <!-- Row bawah: 3 foto sama rata -->
+                            <div class="group relative overflow-hidden rounded-2xl aspect-video cursor-pointer"
+                                onclick="openLightbox(this)">
+                                <img src="https://picsum.photos/seed/malola4/600/400" alt="Galeri 4"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden rounded-2xl aspect-video cursor-pointer"
+                                onclick="openLightbox(this)">
+                                <img src="https://picsum.photos/seed/malola5/600/400" alt="Galeri 5"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden rounded-2xl aspect-video cursor-pointer"
+                                onclick="openLightbox(this)">
+                                <img src="https://picsum.photos/seed/malola6/600/400" alt="Galeri 6"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Lightbox -->
+                <div id="lightbox" class="hidden fixed inset-0 z-[200] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+                    onclick="if(event.target===this) closeLightbox()">
+                    <button onclick="closeLightbox()"
+                            class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <button onclick="lightboxPrev()"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 size-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button onclick="lightboxNext()"
+                            class="absolute right-14 top-1/2 -translate-y-1/2 size-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                    <img id="lightbox-img" src="" alt=""
+                        class="max-w-full max-h-[90vh] rounded-xl object-contain shadow-2xl">
+                    <p id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-xs"></p>
+                </div>
                 <!-- Footer Section -->
                 <footer class="bg-primary text-white px-6 md:px-20 py-12">
                     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -574,6 +666,10 @@
         </button>
         <button data-target="potensi"  class="dot-nav-item group flex items-center justify-end gap-2">
             <span class="dot-label hidden group-hover:block text-[10px] font-semibold text-white bg-slate-800/80 rounded-full px-2 py-0.5 whitespace-nowrap">Potensi</span>
+            <span class="block w-3 h-3 rounded-full border-2 border-primary bg-white transition-all duration-200"></span>
+        </button>
+        <button data-target="galeri" class="dot-nav-item group flex items-center justify-end gap-2">
+            <span class="dot-label hidden group-hover:block text-[10px] font-semibold text-white bg-slate-800/80 rounded-full px-2 py-0.5 whitespace-nowrap">Galeri</span>
             <span class="block w-3 h-3 rounded-full border-2 border-primary bg-white transition-all duration-200"></span>
         </button>
     </nav>
