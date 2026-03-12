@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profil Desa Malola</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7d5440", // Earthy Brown
+                        "secondary": "#34695f", // Forest Green
+                        "highlight": "#8bab6f", // Leaf Green
+                        "background-light": "#fbfbfe",
+                        "background-dark": "#1c1816",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head> 
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-primary backdrop-blur-md sticky top-0 z-50">
+                <div class="flex items-center gap-3">
+                    <h2 class="text-slate-900 text-white text-xl font-bold leading-tight tracking-tight">Desa
+                        Malola</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end gap-8">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-slate-700 text-slate-200 text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="#beranda">Beranda</a>
+                        <a class="text-slate-700 text-slate-200 text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="#sejarah">Sejarah</a>
+                        <a class="text-slate-700 text-slate-200 text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="#visi-misi">Visi Misi</a>
+                        <a class="text-slate-700 text-slate-200 text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="#struktur">Struktur</a>
+                        <a class="text-slate-700 text-slate-200 text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="#potensi">Potensi</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-slate-900 dark:text-white cursor-pointer">menu</span>
+                </div>
+            </header>
+            <main class="flex flex-col flex-1">
+                <!-- Hero Section -->
+                <section class="relative" id="beranda">
+                    <div class="px-6 md:px-20 py-8">
+                        <div
+                            class="relative min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center rounded-xl overflow-hidden shadow-2xl">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+                                data-alt="Beautiful lush green village landscape with mountains"
+                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqKmMjPvA94WA2lK88xYajUAzBq_HuMceGv69zb6grbVsE1ulJ5w1mHRdoQscJ-87HWQwheFgy0OW6sgeC5Ff1mnUtW5CjYCRDx64NbcqUnGMxSFOevoF-8yKGBNHTSSYGOMWBpcIeeTzcZjhFCSjdX94ajPM8i3GBj1l-SspoiVRpLpvq15E22nqFS_S46QQWibpIBaKruHnywryFAbk9QYUHMbOsUOahi0dKaLUh4o3OKiGtzuVSV1KnI9KYpwibNzLQcwP4gb0");'>
+                            </div>
+                            <div class="relative z-10 flex flex-col gap-6 text-center max-w-3xl px-6">
+                                <h1
+                                    class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight drop-shadow-md">
+                                    <div> Selamat Datang di </div> 
+                                    <span class="text-highlight">Desa Malola</span>
+                                </h1>
+                                <p class="text-white/90 text-lg md:text-xl font-normal max-w-2xl mx-auto">
+                                    Membangun kemandirian desa melalui harmoni alam dan kearifan lokal yang lestari demi
+                                    masa depan yang lebih baik.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Sejarah & Lokasi -->
+                <section class="px-6 md:px-20 py-16 bg-white dark:bg-background-dark/50" id="sejarah">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex flex-col lg:flex-row gap-12 items-center">
+                            <div class="flex-1 space-y-6">
+                                <h2 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-extrabold">Sejarah
+                                    &amp; Lokasi Kami</h2>
+                                <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                                    Desa Malola berawal dari kisah tujuh perantau pemberani dari Desa Wuwuk, Kawangkoan, 
+                                    yang pada tahun <strong>1857</strong> menyusuri aliran Sungai Tewalen hingga 
+                                    menemukan kawasan subur yang diapit dua mata air jernih. Di sinilah mereka 
+                                    mendirikan pondok dan meletakkan fondasi kehidupan baru.
+                                </p>
+                                <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                                    Nama <strong>"Malola"</strong> berasal dari kata <em>Ma'alolang</em> — 
+                                    yang berarti <em>membuat tangga</em> atau merintis jalan — sebuah penghormatan 
+                                    atas semangat dan ketekunan para pendiri yang tiada kenal lelah dalam membuka 
+                                    lahan demi masa depan yang lebih baik.
+                                </p>
+                                <div class="pt-4">
+                                    <div class="flex items-center gap-3 text-secondary font-semibold italic">
+                                        <span class="material-symbols-outlined">location_on</span>
+                                        Kecamatan Kumelembuai, Kabupaten Minahasa Selatan, Provinsi Sulawesi Utara
+                                    </div>
+                                </div>
+                                <button onclick="document.getElementById('modal-sejarah').classList.remove('hidden')"
+                                        class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-primary/30 hover:-translate-y-0.5">
+                                        <span class="material-symbols-outlined text-base">menu_book</span>
+                                        Baca Selengkapnya
+                                </button>
+                            </div>
+                            <div class="flex-1 w-full">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6708.8965495309685!2d124.47493855161541!3d1.0613891700035167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1772867426058!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Visi & Misi -->
+                <section class="px-6 md:px-20 py-16 bg-background-light dark:bg-background-dark" id="visi-misi">
+                    <div class="max-w-4xl mx-auto text-center space-y-12">
+                        <div class="space-y-4">
+                            <h2 class="text-slate-900 dark:text-white text-3xl font-bold">Visi Kami</h2>
+                            <div class="p-8 bg-secondary/5 border-l-4 border-secondary rounded-r-xl">
+                                <p class="text-2xl md:text-3xl font-medium text-secondary italic">
+                                    "Menjadi desa mandiri yang unggul dalam ekonomi kreatif berbasis kearifan lokal dan
+                                    kelestarian lingkungan."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <h2 class="text-slate-900 dark:text-white text-3xl font-bold">Misi Kami</h2>
+                            <div class="grid md:grid-cols-2 gap-4 text-left">
+                                <div
+                                    class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex gap-4 items-start">
+                                    <span class="material-symbols-outlined text-highlight font-bold">check_circle</span>
+                                    <p class="text-slate-700 dark:text-slate-200">Meningkatkan kualitas SDM melalui
+                                        pendidikan dan pelatihan berkelanjutan.</p>
+                                </div>
+                                <div
+                                    class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex gap-4 items-start">
+                                    <span class="material-symbols-outlined text-highlight font-bold">check_circle</span>
+                                    <p class="text-slate-700 dark:text-slate-200">Mengembangkan infrastruktur desa yang
+                                        ramah lingkungan.</p>
+                                </div>
+                                <div
+                                    class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex gap-4 items-start">
+                                    <span class="material-symbols-outlined text-highlight font-bold">check_circle</span>
+                                    <p class="text-slate-700 dark:text-slate-200">Mendorong pertumbuhan UMKM lokal untuk
+                                        kesejahteraan warga.</p>
+                                </div>
+                                <div
+                                    class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex gap-4 items-start">
+                                    <span class="material-symbols-outlined text-highlight font-bold">check_circle</span>
+                                    <p class="text-slate-700 dark:text-slate-200">Melestarikan budaya dan tradisi lokal
+                                        sebagai identitas desa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Struktur Pemerintahan -->
+                <section class="px-6 md:px-20 py-16 bg-white dark:bg-background-dark/50" id="struktur">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-12">
+                            <h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-4">Struktur Pemerintahan
+                            </h2>
+                            <p class="text-slate-500 max-w-2xl mx-auto">Pimpinan dan jajaran perangkat desa yang
+                                berdedikasi untuk melayani masyarakat Desa Sejahtera.</p>
+                        </div>
+                        <!-- Top Official -->
+                        <div class="flex justify-center mb-12">
+                            <div class="w-64 text-center group">
+                                <div class="relative mx-auto size-32 mb-4">
+                                    <div
+                                        class="absolute inset-0 bg-primary rounded-full scale-105 opacity-20 group-hover:scale-110 transition-transform">
+                                    </div>
+                                    <span class="material-symbols-outlined text-slate-400">person</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Cianly S. Liando M.Pd</h3>
+                                <p class="text-sm font-semibold text-primary uppercase">Hukum Tua</p>
+                            </div>
+                        </div>
+                        <!-- Secondary Officials -->
+                        <div class="space-y-12 w-full">
+                            <!-- Sekretaris Desa -->
+                            <div class="flex justify-center">
+                                <div class="text-center group w-48">
+                                    <span class="material-symbols-outlined text-slate-400">person</span>
+                                    <h4 class="text-md font-bold text-slate-900 dark:text-white">Harly S. D. Pangkey</h4>
+                                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Sekretaris
+                                        Desa</p>
+                                </div>
+                            </div>
+                            <!-- Kasie & Kaur Sections -->
+                            <div class="grid md:grid-cols-2 gap-12">
+                                <!-- Kasie Group -->
+                                <div class="space-y-6">
+                                    <h5
+                                        class="text-center text-sm font-bold text-slate-400 uppercase tracking-[0.2em] border-b pb-2">
+                                        Kepala Seksi (Kasie)</h5>
+                                    <div class="grid grid-cols-3 gap-4">
+                                        <div class="text-center">
+                                            <div
+                                                class="size-16 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full mb-2 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-slate-400">person</span>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-slate-900 dark:text-white">
+                                                Jufri Rondonuwu
+                                            </p>
+                                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                                                Kasie Pemerintahan
+                                            </p>
+                                            
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="size-16 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full mb-2 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-slate-400">person</span>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-slate-900 dark:text-white">
+                                                Gloria Rantung
+                                            </p>
+                                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                                                Kasie Kesejahteraan
+                                            </p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="size-16 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full mb-2 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-slate-400">person</span>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-slate-900 dark:text-white">
+                                                Yublita Rindorindo
+                                            </p>
+                                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                                                Kasie Pelayanan
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Kaur Group -->
+                                <div class="space-y-6">
+                                    <h5
+                                        class="text-center text-sm font-bold text-slate-400 uppercase tracking-[0.2em] border-b pb-2">
+                                        Kepala Urusan (Kaur)</h5>
+                                    <div class="grid grid-cols-3 gap-4">
+                                        <div class="text-center">
+                                            <div
+                                                class="size-16 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full mb-2 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-slate-400">person</span>
+                                            </div>
+                                            <p
+                                                class="text-[10px] font-bold text-slate-900 dark:text-white leading-tight">
+                                                Ivana W. Rondonuwu</p>
+                                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                                                Kaur Tata Usaha &amp; Umum
+                                            </p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="size-16 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full mb-2 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-slate-400">person</span>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-slate-900 dark:text-white">Meriam Turangan, S.E</p>
+                                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                                                Kaur Keuangan
+                                            </p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="size-16 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full mb-2 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-slate-400">person</span>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-slate-900 dark:text-white">Hanny D. Rondonuwu</p>
+                                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                                                Kaur Perencanaan
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Kepala Jaga Section -->
+                            <div class="space-y-6">
+                                <h5
+                                    class="text-center text-sm font-bold text-slate-400 uppercase tracking-[0.2em] border-b pb-2">
+                                    Perangkat Kewilayahan (Kepala Jaga)</h5>
+                                <div class="grid grid-cols-4 md:grid-cols-7 gap-4">
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Jufri Sinaulan</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 1</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Sutryani B. Sinaulan</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 2</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Hober J. Rondonuwu</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 3</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Gleadyes Sinaulan, S.Pd</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 4</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Rival Rompas</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 5</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Eirene Legi</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 6</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="size-12 mx-auto bg-slate-50 dark:bg-slate-800/50 rounded-full mb-1 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-xs text-slate-300">person</span>
+                                        </div>
+                                        <p class="text-[10px] font-bold text-slate-900 dark:text-white">Delfie Lintong</p>
+                                        <p class="text-[9px] font-medium text-slate-500">Kepala Jaga 7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Potensi Desa -->
+                <section class="px-6 md:px-20 py-16 bg-background-light dark:bg-background-dark" id="potensi">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex justify-between items-end mb-10">
+                            <div>
+                                <h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-2">Potensi Desa</h2>
+                                <p class="text-slate-500">Kekayaan alam dan kreativitas warga yang menjadi penggerak
+                                    ekonomi.</p>
+                            </div>
+                            <a class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline"
+                                href="#">
+                                Lihat Semua <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Potensi 1: Pertanian -->
+                            <div
+                                class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+                                <div class="h-48 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="Rice fields in a rural village"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH8R0dj8HP_LXyPrG81Xu-xVE7NOkreCKZslC2m_luLdnSZxle0ORQ0PGebcEtQlm17yrT99hvlJOeW3Do_3sHiVw3cfzlYelEuS1pxCgHM5u5tLjp3cLXxnUu5sn5d21IFo4HHlsWVq4G3gZ9JgHpTR0vvl-SBJ6B6shBSmTo23N0SUcvAvOiHLNW9H_ctVuO091pTc3ZRxpzKvPHuo0BRxDpBlB1opybqMSC9yY9fE3g8iXKWoQk0Vw9yB4KEdciMlHcPiHKq_I" />
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <div
+                                        class="size-10 bg-highlight/20 text-highlight rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined">agriculture</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Air dari Pohon Seho (Enau / Aren)</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed">
+                                        Bahan dasar untuk pembuatan saguer, gula aren dan minumam beralkohol tinggi "Cap Tikus"
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Potensi 2: Pariwisata -->
+                            <div
+                                class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+                                <div class="h-48 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="Scenic river and forest view"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvZBCaSDZlsNKYpo_zjUfibOTANu7t2UdzD6eLbGOnmBK6eCXvh9lizQ74rlM_O5J04laUZqQMGpJJl3h01wp6gRiAq4TMRe0fMrcSJiuJitJhmSwKu-LtuuN0mZc4GtYplR9F0h02ANMR1z1tU1z_38uidUuRQqet7qGHU1dAyNRDqx4NptPFaDHUSDPDymf_dyQOUupyxjOV6mvdaF8oUIphXyUmYhhR-0MEJrVvfk-N3R1Z6abxmIPmBJ697mFlIQa6iaEkwow" />
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <div
+                                        class="size-10 bg-secondary/20 text-secondary rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined">landscape</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Air Terung</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed">
+                                        Menawarkan pengalaman susur sungai dan camping ground dengan pemandangan
+                                        pegunungan yang asri dan udara segar.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Potensi 3: Kerajinan -->
+                            <div
+                                class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+                                <div class="h-48 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        data-alt="Handcrafted bamboo baskets and crafts"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuByfbxXC5WGH-uWvJdyrb5p1UsEF_UVBCwpCwIW5-u5HkXha5gREcaoqUUQ2FdqtZyGlv1ryADN-5aFbBf7Z0BtiYz2mTRFyvqRtOlgZsy7CQBK9JglSs43ELIDfD6qNveveW7AoSeIL_2btfCqkRyoz9bOxHSl-VmJ0qPyRju5PSqILJTXigIyy4qAcmu2kRvHMCIhGMNGDJ3byRbnUEGNuTDuuE8EhfbT5ythGAxwuhmWoiiPesxjG3QEdZKP_aVSxLTYbIi6isg" />
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <div
+                                        class="size-10 bg-primary/20 text-primary rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined">brush</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Anyaman Bambu</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed">
+                                        Produk kerajinan tangan dari bambu yang berkualitas ekspor, menggabungkan desain
+                                        modern dan teknik tradisional.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Footer Section -->
+                <footer class="bg-primary text-white px-6 md:px-20 py-12">
+                    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div>
+                            <h3 class="font-bold text-lg mb-4">Hubungi Kami</h3>
+                            <ul class="space-y-3 text-white/70 text-sm">
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-sm">mail</span> info@desasejahtera.go.id
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-sm">call</span> +62 812 3456 7890
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-xs">
+                        © 2026 Desa Malola. All rights reserved.
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+      <!-- Modal Sejarah -->
+    <div id="modal-sejarah" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+        onclick="if(event.target===this) this.classList.add('hidden')">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- Modal Box -->
+        <div class="relative bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-8 py-5 border-b border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10 flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="size-10 bg-primary/20 text-primary rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined">history_edu</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-slate-900 dark:text-white leading-tight">Sejarah Desa Malola</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Kec. Kumelembuai, Minahasa Selatan</p>
+                    </div>
+                </div>
+                <button onclick="document.getElementById('modal-sejarah').classList.add('hidden')"
+                    class="size-9 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <!-- Modal Body (scrollable) -->
+            <div class="overflow-y-auto px-8 py-7 space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed">
+
+                <!-- Bagian 1 -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-1 h-6 bg-primary rounded-full"></span>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white">Asal-Usul dan Perintisan Kampung (1857)</h4>
+                    </div>
+                    <p>
+                        Desa Malola yang terletak di Kecamatan Kumelembuai, Kabupaten Minahasa Selatan, 
+                        Provinsi Sulawesi Utara, menyimpan sejarah yang kaya dan penuh makna. Kisah berdirinya 
+                        desa ini berawal pada tahun <strong>1857</strong>, ketika tujuh orang perantau dari 
+                        Desa Wuwuk, Distrik Kawangkoan, memutuskan meninggalkan kampung halaman mereka untuk 
+                        mencari lahan pertanian yang baru dan lebih subur.
+                    </p>
+                    <p>
+                        Ketujuh perintis tersebut masing-masing bernama 
+                        <strong>Pangkey, Suoth, Rompas, Sinaulan, Rompis, Piring, dan Lintong</strong> — 
+                        nama-nama yang hingga kini masih menjadi marga kebanggaan warga Malola. Perjalanan 
+                        mereka dimulai dari sebuah sungai bernama <em>Tewalen</em> di sebelah timur Desa 
+                        Kumelembuai, menyusurinya ke arah selatan hingga tiba di kawasan yang diapit oleh 
+                        dua mata air besar berjarak sekitar 30 meter satu sama lain.
+                    </p>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-dashed border-slate-200 dark:border-slate-700"></div>
+
+                <!-- Bagian 2 -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-1 h-6 bg-secondary rounded-full"></span>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white">Mata Air "Air Terung" — Titik Lahirnya Desa</h4>
+                    </div>
+                    <p>
+                        Di antara lebatnya pohon-pohon besar dan rumpun bambu yang meneduhkan, kedua mata air 
+                        itu mengalirkan air sejuk dan jernih tanpa henti. Di sinilah para perintis pertama kali 
+                        mendirikan pondok dan memulai kehidupan baru. Mata air ini kemudian dikenal dengan nama 
+                        <strong>"Air Terung"</strong> dan menjadi situs sakral yang dipandang sebagai 
+                        <em>titik kelahiran Desa Malola</em>.
+                    </p>
+                    <p>
+                        Hingga hari ini, Air Terung masih memancarkan airnya yang segar di bagian timur 
+                        perkampungan, tepatnya di wilayah Jaga I. Untuk menuju ke sana, pengunjung dapat 
+                        menyusuri jalan setapak yang menurun dan berkelok sejauh sekitar 150 meter dari 
+                        pemukiman, melewati rimbun pepohonan bambu yang menjadi saksi bisu perjalanan panjang desa ini.
+                    </p>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-dashed border-slate-200 dark:border-slate-700"></div>
+
+                <!-- Bagian 3 -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-1 h-6 bg-highlight rounded-full"></span>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white">Makna di Balik Nama "Malola"</h4>
+                    </div>
+                    <p>
+                        Nama <strong>Malola</strong> bukan sekadar label geografis — ia adalah cerminan semangat 
+                        dan kerja keras para pendirinya. Kata ini berasal dari bahasa daerah setempat: 
+                        <em>"Ma'alolang"</em>, yang berarti <strong>membuat tangga</strong> atau bekerja keras 
+                        membuka jalan. Nama ini dipilih sebagai penghormatan atas perjuangan ketujuh perintis 
+                        yang dengan gigih merintis jalan hingga berhasil menemukan kawasan yang subur ini.
+                    </p>
+                    <div class="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary rounded-r-lg p-4 italic text-slate-600 dark:text-slate-300">
+                        "Setiap pencapaian yang bermakna membutuhkan ketekunan, kerja keras, dan semangat untuk 
+                        terus melangkah maju." — Filosofi hidup warga Malola.
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-dashed border-slate-200 dark:border-slate-700"></div>
+
+                <!-- Bagian 4 -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-1 h-6 bg-primary rounded-full"></span>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white">Berdirinya Desa secara Resmi (1861)</h4>
+                    </div>
+                    <p>
+                        Setelah beberapa tahun kehidupan sosial tumbuh dan berkembang, pada <strong>tahun 1861</strong> 
+                        Desa Malola resmi diakui dan berdiri secara administratif. Pengakuan ini ditandai dengan 
+                        diangkatnya <strong>Junus Pangkey</strong> sebagai 
+                        <strong>Kepala Pemerintahan Desa Malola yang pertama</strong> — sebuah tonggak bersejarah 
+                        yang menandai dimulainya roda pemerintahan desa secara formal.
+                    </p>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-dashed border-slate-200 dark:border-slate-700"></div>
+
+                <!-- Bagian 5 -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-1 h-6 bg-secondary rounded-full"></span>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white">Warisan Budaya Tutur &amp; Pelestarian Sejarah</h4>
+                    </div>
+                    <p>
+                        Selama lebih dari satu abad, sejarah Desa Malola diwariskan secara turun-temurun melalui 
+                        <strong>budaya tutur</strong> — diceritakan dari orang tua kepada anak cucu. Menyadari 
+                        pentingnya dokumentasi tertulis, Pemerintah Desa Malola membentuk 
+                        <strong>Tim Penyusun Sejarah Desa</strong> yang melibatkan perangkat desa, sejarawan lokal, 
+                        dan berbagai elemen masyarakat untuk menjaga agar kisah leluhur ini tidak terlupakan oleh 
+                        arus zaman.
+                    </p>
+                </div>
+
+                <!-- Penutup / Inspiratif -->
+                <div class="bg-secondary/5 dark:bg-secondary/10 rounded-xl p-5 space-y-2">
+                    <div class="flex items-center gap-2 text-secondary font-bold">
+                        <span class="material-symbols-outlined text-base">park</span>
+                        Malola Hari Ini
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                        Desa Malola kini mengemban visi <strong>"MALOLA SATU 'CERIA'"</strong> — 
+                        <em>Cerdas, Inovasi, Sejahtera</em>. Air Terung masih mengalir. Nama Pangkey, Suoth, 
+                        Rompas, Sinaulan, Rompis, Piring, dan Lintong masih diucapkan dengan penuh hormat. 
+                        Dan semangat <em>Ma'alolang</em> terus menyala di dada setiap warga Malola.
+                    </p>
+                </div>
+
+            </div>
+            <!-- Modal Footer -->
+            <div class="flex-shrink-0 px-8 py-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                <button onclick="document.getElementById('modal-sejarah').classList.add('hidden')"
+                    class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all text-sm">
+                    <span class="material-symbols-outlined text-sm">close</span>
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
