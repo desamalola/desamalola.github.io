@@ -1,7 +1,7 @@
 // ── Dot Navigation (Mobile Only) ─────────────────────────
 const dotNav     = document.getElementById('dot-nav');
 const dotItems   = document.querySelectorAll('.dot-nav-item');
-const sections   = ['beranda', 'sejarah', 'struktur', 'potensi', 'galeri'];
+const sections   = ['beranda', 'informasi', 'sejarah', 'struktur', 'potensi', 'galeri'];
 
 // Tampilkan hanya di mobile
 function toggleDotNav() {
@@ -113,6 +113,25 @@ initCarousel('kasie-track', 'kasie-dots', 'kasie-prev', 'kasie-next', 'blue');
 initCarousel('kaur-track', 'kaur-dots', 'kaur-prev', 'kaur-next', 'blue');
 initCarousel('jaga-track', 'jaga-dots', 'jaga-prev', 'jaga-next', 'slate');
 initCarousel('potensi-track', 'potensi-dots', 'potensi-prev', 'potensi-next', '#2563eb', '#bfdbfe');
+
+// ── Tab Informasi Umum ────────────────────────────────────
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        // Update tombol
+        document.querySelectorAll('.tab-btn').forEach(b => {
+            b.classList.remove('bg-primary', 'text-white');
+            b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-500', 'border', 'border-slate-200');
+        });
+        btn.classList.add('bg-primary', 'text-white');
+        btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-500', 'border', 'border-slate-200');
+
+        // Update konten
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+        document.getElementById(`tab-${target}`).classList.remove('hidden');
+    });
+});
 
 // ── Lightbox ─────────────────────────────────────────────
 const allGalleryImgs = () => [...document.querySelectorAll('#galeri img')];
